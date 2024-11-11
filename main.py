@@ -3,10 +3,11 @@ import requests
 import smtplib
 import ssl
 from email.message import EmailMessage
+import os
 
 # List of shoes to scrape prices for
 shoes = {'vomero': 3299.90, 'pegasus%20plus': 3399.90, 'novablast': 2999.90}
-shoes_on_sale = {'vomero': {'price':2300, 'link': 'https://www.sportsmanswarehouse.co'}}
+shoes_on_sale = {}
 
 def scrape_url(url):
     response = requests.get(url)
@@ -35,7 +36,7 @@ def notify():
     smtp_server = "smtp.gmail.com"
     port = 465
     sender_email = "emailbotkellen@gmail.com"
-    sender_password = "gjsc xjpi dboh szbh"
+    sender_password = os.environ.get('EMAIL_PASSWORD')
     receiver_email = "Kellenmossner@gmail.com"
 
     subject = "Shoes on Sale"
