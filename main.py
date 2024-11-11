@@ -61,12 +61,12 @@ def notify():
 # Rest of the code remains the same
 
 def main():
-    # base_url = 'https://www.sportsmanswarehouse.co.za/products/?keyword='
+    base_url = 'https://www.sportsmanswarehouse.co.za/products/?keyword='
     
-    # for shoe in shoes.keys():
-    #     url = base_url + shoe + '&filters%5Bcategories%5D%5B%5D=5771'
-    #     print(url)
-    #     scrape_shoes(url, shoe)
+    for shoe in shoes.keys():
+        url = base_url + shoe + '&filters%5Bcategories%5D%5B%5D=5771'
+        print(url)
+        scrape_shoes(url, shoe)
         
     if shoes_on_sale:
         notify()     
