@@ -34,7 +34,7 @@ def scrape_shoes(url, shoe):
 def notify():
     smtp_server = "smtp.gmail.com"
     port = 465
-    sender_email = "emailbotkelle@gmail.com"
+    sender_email = "emailbotkellen@gmail.com"
     sender_password = "gjsc xjpi dboh szbh"
     receiver_email = "Kellenmossner@gmail.com"
 
